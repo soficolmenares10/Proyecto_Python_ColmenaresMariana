@@ -1,0 +1,18 @@
+[
+    {
+        "id": "1",
+        "nombres": "Mariana",
+        "apellidos": "Colmenares",
+        "direccion": "Calle 45 #12-34",
+        "acudiente": "Laura Pérez",
+        "telefono_celular": "3001234567",
+        "telefono_fijo": "6076543210",
+        "correo": "mariana@campus.com",
+        "contrasena": "Camper123",
+        "estado": null,
+        "riesgo": null,
+        "ruta_asignada": null,
+        "trainer_asignado": null,
+        "salon_asignado": null
+    }
+]

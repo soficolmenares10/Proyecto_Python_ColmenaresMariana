@@ -1,0 +1,37 @@
+[
+    {
+        "nombre": "Edwen Salas",
+        "correo": "edwen@campus.com",
+        "contrasena": "Trainer123",
+        "horario": "6AM - 2PM",
+        "especialidad": ["JAVA", "NETCORE"]
+    },
+    {
+        "nombre": "Pedro Diaz",
+        "correo": "pedro@campus.com",
+        "contrasena": "Trainer123",
+        "horario": "6AM - 6PM",
+        "especialidad": ["NodeJS", "JAVA"]
+    },
+    {
+        "nombre": "Jholver",
+        "correo": "jholver@campus.com",
+        "contrasena": "Trainer123",
+        "horario": "6AM - 2PM",
+        "especialidad": ["JAVA", "NETCORE"]
+    },
+    {
+        "nombre": "Cristian",
+        "correo": "cristian@campus.com",
+        "contrasena": "Trainer123",
+        "horario": "10AM - 6PM",
+        "especialidad": ["JAVA", "NodeJS"]
+    },
+    {
+        "nombre": "Kevin David",
+        "correo": "kevin@campus.com",
+        "contrasena": "Trainer123",
+        "horario": "6AM - 2PM",
+        "especialidad": ["JAVA"]
+    }
+]

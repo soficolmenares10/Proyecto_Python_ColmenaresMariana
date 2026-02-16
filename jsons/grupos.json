@@ -1,0 +1,13 @@
+[
+    {
+        "id": "1",
+        "nombre": "Grupo 001",
+        "ruta": "JAVA",
+        "trainer": "Edwer Salas",
+        "salon": "Salón 101",
+        "fecha_inicio": "2026-01-15",
+        "fecha_fin": "2026-11-15",
+        "estado": "Activo",
+        "campers": []
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "nombre": "Sputnik",
+        "capacidad": 35,
+        "campers_asignados": []
+    },
+    {
+        "id": "2",
+        "nombre": "Apolo",
+        "capacidad": 35,
+        "campers_asignados": []
+    },
+    {
+        "id": "3",
+        "nombre": "Artemis",
+        "capacidad": 35,
+        "campers_asignados": []
+    }
+]

@@ -111,7 +111,7 @@ def editar_grupo():
     grupos = cargar_grupos()
     
     if not grupos:
-        print("\nNo hay grupos para editar.")
+        print("No hay grupos para editar.")
         return
     
     listar_grupos()
@@ -125,10 +125,10 @@ def editar_grupo():
             break
     
     if not grupo_encontrado:
-        print(f"\n✗ Grupo con ID {id_grupo} no encontrado.")
+        print(f"✗ Grupo con ID {id_grupo} no encontrado.")
         return
     
-    print(f"\nEditando grupo: {grupo_encontrado['nombre']}")
+    print(f"Editando grupo: {grupo_encontrado['nombre']}")
     print("Deje en blanco si no desea cambiar un valor")
     
     nombre = input(f"Nombre ({grupo_encontrado['nombre']}): ").strip()
@@ -148,21 +148,21 @@ def editar_grupo():
         grupo_encontrado['salon'] = salon
     
     if guardar_grupos(grupos):
-        print(f"\n✓ Grupo actualizado exitosamente")
+        print(f"✓ Grupo actualizado exitosamente")
     else:
-        print("\n✗ Error al guardar los cambios")
+        print("✗ Error al guardar los cambios")
 
 def eliminar_grupo():
     """Eliminar un grupo"""
     grupos = cargar_grupos()
     
     if not grupos:
-        print("\nNo hay grupos para eliminar.")
+        print("No hay grupos para eliminar.")
         return
     
     listar_grupos()
     
-    id_grupo = input("\nIngrese el ID del grupo a eliminar: ").strip()
+    id_grupo = input("Ingrese el ID del grupo a eliminar: ").strip()
     
     grupo_encontrado = None
     for i, grupo in enumerate(grupos):
@@ -171,17 +171,17 @@ def eliminar_grupo():
             break
     
     if not grupo_encontrado:
-        print(f"\n✗ Grupo con ID {id_grupo} no encontrado.")
+        print(f"✗ Grupo con ID {id_grupo} no encontrado.")
         return
     
-    confirmacion = input(f"\n¿Está seguro de que desea eliminar el grupo '{grupo_encontrado[1]['nombre']}'? (s/n): ").strip().lower()
+    confirmacion = input(f"¿Está seguro de que desea eliminar el grupo '{grupo_encontrado[1]['nombre']}'? (s/n): ").strip().lower()
     
     if confirmacion == 's':
         grupos.pop(grupo_encontrado[0])
         if guardar_grupos(grupos):
-            print(f"\n✓ Grupo eliminado exitosamente")
+            print(f"✓ Grupo eliminado exitosamente")
         else:
-            print("\n✗ Error al eliminar el grupo")
+            print("✗ Error al eliminar el grupo")
     else:
         print("Operación cancelada")
 

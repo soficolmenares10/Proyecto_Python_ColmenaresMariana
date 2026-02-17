@@ -3,7 +3,25 @@
         "nombre": "Carlos Ramirez",
         "correo": "carlos@campus.com",
         "contrasena": "Admin123"
+    },
+    {
+        "nombre": "Laura Gomez",
+        "correo": "laura@campus.com",
+        "contrasena": "Admin456"
+    },
+    {
+        "nombre": "Andres Perez",
+        "correo": "andres@campus.com",
+        "contrasena": "Admin789"
+    },
+    {
+        "nombre": "Sofia Torres",
+        "correo": "sofia@campus.com",
+        "contrasena": "Admin321"
+    },
+    {
+        "nombre": "Miguel Castro",
+        "correo": "miguel@campus.com",
+        "contrasena": "Admin654"
     }
 ]
-
-

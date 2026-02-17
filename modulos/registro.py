@@ -1,42 +1,58 @@
 import json
 import os
 
+
 def cargar_archivo(ruta):
-    with open(ruta, "r", encoding="utf-8") as archivo:
-        return json.load(archivo)
+    """Carga un archivo JSON de forma segura"""
+    try:
+        with open(ruta, "r", encoding="utf-8") as archivo:
+            return json.load(archivo)
+    except FileNotFoundError:
+        print(f"Archivo no encontrado: {ruta}")
+        return []
+    except json.JSONDecodeError:
+        print(f"Error en el formato JSON: {ruta}")
+        return []
+
 
 def iniciar_sesion():
     print("===== LOGIN =====")
 
-    correo = input("Correo: ")
-    contrasena = input("Contraseña: ")
+    correo = input("Correo: ").strip()
+    contrasena = input("Contraseña: ").strip()
 
-    # Obtener la ruta del directorio actual del archivo
+    # 📌 Ruta base del proyecto
     ruta_base = os.path.dirname(os.path.abspath(__file__))
-    ruta_jsons = os.path.join(ruta_base, "../jsons")
-    
-    coordinadores = cargar_archivo(os.path.join(ruta_jsons, "coordinadores.json"))
-    trainers = cargar_archivo(os.path.join(ruta_jsons, "trainers.json"))
-    campers = cargar_archivo(os.path.join(ruta_jsons, "campers.json"))
 
-    # Buscar en coordinadores
+    # 📌 Carpeta jsons (misma estructura que ya tienes)
+    ruta_jsons = os.path.join(ruta_base, "../jsons")
+
+    # 📌 Rutas completas
+    ruta_coordinadores = os.path.join(ruta_jsons, "coordinadores.json")
+    ruta_trainers = os.path.join(ruta_jsons, "trainers.json")
+
+    # 📌 Cargar archivos
+    coordinadores = cargar_archivo(ruta_coordinadores)
+    trainers = cargar_archivo(ruta_trainers)
+
+    # ---------------- BUSCAR COORDINADOR ----------------
     for user in coordinadores:
-        if user.get("correo") == correo and user.get("contrasena") == contrasena:
+        if (
+            user.get("correo", "").strip().lower() == correo.lower()
+            and user.get("contrasena", "").strip() == contrasena
+        ):
             print("Bienvenido Coordinador")
             return "coordinador"
 
-    # Buscar en trainers
+    # ---------------- BUSCAR TRAINER ----------------
     for user in trainers:
-        if user.get("correo") == correo and user.get("contrasena") == contrasena:
+        if (
+            user.get("correo", "").strip().lower() == correo.lower()
+            and user.get("contrasena", "").strip() == contrasena
+        ):
             print("Bienvenido Trainer")
             return "trainer"
 
-    # Buscar en campers
-    for user in campers:
-        if user.get("correo") == correo and user.get("contrasena") == contrasena:
-            print("Bienvenido Camper")
-            return "camper"
-
+    # ❌ Si no coincide nada
     print("Correo o contraseña incorrectos")
     return None
-
